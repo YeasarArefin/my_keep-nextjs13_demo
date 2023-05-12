@@ -29,7 +29,7 @@ export default function NavInfo() {
                      className="rounded-full border-[3px]"
                   />
                </div>
-               <button type="button" onClick={leaveAccount}>
+               <button className="text-sm" type="button" onClick={leaveAccount}>
                   Sign Out
                </button>
             </div>
