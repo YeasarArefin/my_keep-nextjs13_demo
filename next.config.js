@@ -12,7 +12,8 @@ const nextConfig = {
       return [
          {
             // matching all API routes
-            source: 'https://mykeeep.vercel.app/api/:path*',
+            source: '/api/:path*',
+            destination: 'https://mykeeep.vercel.app/:path*',
             headers: [
                { key: 'Access-Control-Allow-Credentials', value: 'true' },
                { key: 'Access-Control-Allow-Origin', value: '*' },
