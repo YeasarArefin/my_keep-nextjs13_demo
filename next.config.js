@@ -8,7 +8,7 @@ const nextConfig = {
       return config;
    },
 
-   async headers() {
+   /* async headers() {
       return [
          {
             // matching all API routes
@@ -25,7 +25,7 @@ const nextConfig = {
             ],
          },
       ];
-   },
+   }, */
 
    experimental: {
       serverComponentsExternalPackages: ['mongoose'],
