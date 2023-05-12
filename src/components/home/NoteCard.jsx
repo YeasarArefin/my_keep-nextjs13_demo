@@ -26,6 +26,7 @@ export default function NoteCard({ note: noteData, deleteNoteByID }) {
                </Link>
 
                <button
+                  onClick={() => deleteNoteByID(_id)}
                   type="button"
                   className="bg-red-600 hover:bg-red-700 transition duration-300 rounded-full p-2 text-white text-lg "
                >

@@ -4,12 +4,13 @@ import useAuth from '@/hooks/useAuth';
 import { Editor } from '@tinymce/tinymce-react';
 import axios from 'axios';
 import { useState } from 'react';
+import Button from './Button';
 
 export default function TextEditor() {
    const [editorText, setEditorText] = useState('Adnan');
    const { user } = useAuth();
 
-   const handleNoteSave = async () => {
+   const handleSaveNote = async () => {
       const note = { email: user.email, note: editorText };
       const { data } = await axios.post('/api/notes', note);
    };
@@ -64,10 +65,9 @@ export default function TextEditor() {
          </div>
          <div className="p-2 text-end">
             {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions, react/button-has-type */}
-            <button onClick={handleNoteSave} className="text-black">
-               save
-               {/* <Button className="w-20">Save</Button> */}
-            </button>
+            <Button onClick={handleSaveNote} className="w-20">
+               Save
+            </Button>
          </div>
       </div>
    );
